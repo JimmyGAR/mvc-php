@@ -20,6 +20,8 @@ while ($row = $statement->fetch()) {
    $posts[] = $post;
 }
 
+require('templates/homepage.php');
+
 foreach ($posts as $post) {
    ?>
    <div class="news">
@@ -38,6 +40,4 @@ foreach ($posts as $post) {
    </div>
    <?php
 } // Fin de la boucle des billets
-
-require('templates/homepage.php');
 ?>
