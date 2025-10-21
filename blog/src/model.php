@@ -16,7 +16,8 @@ function getPosts()
         $post = [
             'title' => $row['title'],
             'content' => $row['content'],
-            'frenchCreationDate' => $row['creation_date_fr']
+            'frenchCreationDate' => $row['creation_date_fr'],
+            'identifier' => $row['id']
         ];
 
         $posts[] = $post;
