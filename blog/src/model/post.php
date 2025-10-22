@@ -1,5 +1,7 @@
 <?php
 
+require_once('src/lib/database.php');
+
 class Post
 {
     public string $title;
@@ -10,12 +12,11 @@ class Post
 
 class PostRepository
 {
-    public ?PDO $database = null;
+    public DatabaseConnection $connection;
 
     public function getPost(/*PostRepository $this,*/ string $identifier): Post
     {
-        dbConnect($this);
-        $statement = $this->database->prepare(
+        $statement = $this->connection->getConnection()->prepare(
             "SELECT id, title, content,
 DATE_FORMAT(creation_date, '%d/%m/%Y à %Hh%imin%ss')
 AS french_creation_date FROM posts WHERE id = ?"
@@ -32,10 +33,8 @@ AS french_creation_date FROM posts WHERE id = ?"
 
     public function getPosts()
     {
-        dbConnect($this);
-
         // On récupère les 5 derniers billets
-        $statement = $this->database->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts ORDER BY creation_date DESC LIMIT 0, 5');
+        $statement = $this->connection->getConnection()->query('SELECT id, title, content, DATE_FORMAT(creation_date, \'%d/%m/%Y à %Hh%imin%ss\') AS creation_date_fr FROM posts ORDER BY creation_date DESC LIMIT 0, 5');
 
         $posts = [];
         while ($row = $statement->fetch()) {
@@ -50,15 +49,4 @@ AS french_creation_date FROM posts WHERE id = ?"
 
         return $posts;
     }
-
-}
-
-function dbConnect(PostRepository $repository)
-{
-
-    if ($repository->database === null) {
-        $repository->database = new PDO('mysql:host=localhost;
-dbname=blog;charset=utf8', 'root', '');
-    }
-
 }
