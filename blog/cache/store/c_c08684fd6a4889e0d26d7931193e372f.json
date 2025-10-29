@@ -1,0 +1,74 @@
+{
+    "name": "Application\\Model\\Post\\Post",
+    "line": 7,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "Application\\Model\\Post",
+    "file": "C:\\wamp64\\www\\mvc-php\\blog\/src\\model\\post\\PostRepository.php",
+    "relative_file": null,
+    "hash": "cb5201d3f66e149326ff991699185b553791268a",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "": "Application\\Lib\\Database\\DatabaseConnection"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "title": {
+            "name": "title",
+            "line": 9,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": []
+        },
+        "content": {
+            "name": "content",
+            "line": 10,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": []
+        },
+        "frenchCreationDate": {
+            "name": "frenchCreationDate",
+            "line": 11,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": []
+        },
+        "identifier": {
+            "name": "identifier",
+            "line": 12,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": []
+        }
+    },
+    "methods": [],
+    "constants": []
+}

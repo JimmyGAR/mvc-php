@@ -20,6 +20,6 @@ return new Doctum($iterator, [
     'source_dir' => __DIR__ . '/src',
     'default_opened_level' => 2,
     'build_namespace' => true,
-    'theme' => 'responsive',
+    'theme' => 'default',
     'versions' => $versions,
 ]);

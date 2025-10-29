@@ -1,0 +1,109 @@
+{
+    "name": "Application\\Model\\Post\\PostRepository",
+    "line": 15,
+    "short_desc": null,
+    "long_desc": null,
+    "hint": null,
+    "tags": [],
+    "namespace": "Application\\Model\\Post",
+    "file": "C:\\wamp64\\www\\mvc-php\\blog\/src\\model\\post\\PostRepository.php",
+    "relative_file": null,
+    "hash": "cb5201d3f66e149326ff991699185b553791268a",
+    "parent": null,
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "": "Application\\Lib\\Database\\DatabaseConnection"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": {
+        "connection": {
+            "name": "connection",
+            "line": 17,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "default": null,
+            "errors": []
+        }
+    },
+    "methods": {
+        "getPost": {
+            "name": "getPost",
+            "line": 19,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": [
+                [
+                    "\\Application\\Model\\Post\\Post",
+                    false
+                ]
+            ],
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": {
+                "identifier": {
+                    "name": "identifier",
+                    "line": 19,
+                    "short_desc": null,
+                    "long_desc": null,
+                    "hint": [
+                        [
+                            "string",
+                            false
+                        ]
+                    ],
+                    "tags": [],
+                    "modifiers": {
+                        "nodeType": "Identifier",
+                        "name": "string",
+                        "attributes": {
+                            "startLine": 19,
+                            "comments": [
+                                {
+                                    "nodeType": "Comment",
+                                    "text": "\/*PostRepository $this,*\/",
+                                    "line": 19,
+                                    "filePos": 345,
+                                    "tokenPos": 67,
+                                    "endLine": 19,
+                                    "endFilePos": 369,
+                                    "endTokenPos": 67
+                                }
+                            ],
+                            "endLine": 19
+                        }
+                    },
+                    "default": null,
+                    "variadic": false,
+                    "is_by_ref": false
+                }
+            }
+        },
+        "getPosts": {
+            "name": "getPosts",
+            "line": 36,
+            "short_desc": null,
+            "long_desc": null,
+            "hint": null,
+            "hint_desc": null,
+            "tags": [],
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}
