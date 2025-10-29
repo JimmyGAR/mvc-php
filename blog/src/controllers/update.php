@@ -12,7 +12,7 @@ class UpdateController
 {
     private CommentRepository $commentRepository;
 
-    public function updateComment(string $post, array $input)
+    public function updateComment(string $post, array $input, string $postID)
     {
         $id = null;
         $comment = null;
@@ -29,7 +29,7 @@ class UpdateController
         if (!$success) {
             throw new \Exception('Impossible d\'ajouter le commentaire !');
         } else {
-            header('Location: index.php');
+            header('Location: index.php?action=post&id=' . $postID);
         }
     }
 

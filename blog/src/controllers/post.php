@@ -30,9 +30,13 @@ class PostController
         require('templates/post.php');
     }
 
-    public function comment(string $identifier)
+    public function comment(string $identifier, string $postID)
     {
         $connection = new DatabaseConnection();
+
+        $postRepository = new PostRepository();
+        $postRepository->connection = $connection;
+        $post = $postRepository->getPost($postID);
 
         $commentRepository = new CommentRepository();
         $commentRepository->connection = $connection;

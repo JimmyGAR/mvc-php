@@ -16,7 +16,7 @@
 
     <h2>Modifier un commentaire</h2>
 
-    <form action="index.php?action=updateComment&id=<?= $comment->id ?>" method="post">
+    <form action="index.php?action=updateComment&id=<?= $comment->id ?>&postID=<?= $post->identifier ?>" method="post">
         <input type="hidden" name="id" value="<?= $comment->id ?>">
         <p><strong><?= htmlspecialchars($comment->author) ?> </strong>
             le <?= $comment->frenchCreationDate ?> </p>

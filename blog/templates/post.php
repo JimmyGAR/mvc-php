@@ -26,7 +26,7 @@
 
     <h2>Commentaires</h2>
 
-    <form action="index.php?action=addComment&id=<?= $post->identifier ?> " method="post">
+    <form action="index.php?action=addComment&id=<?= $post->identifier ?>" method="post">
         <div>
             <label for="author">Auteur</label><br />
             <input type="text" id="author" name="author" />
@@ -47,7 +47,7 @@
             le <?= $comment->frenchCreationDate ?> </p>
         <p><?= nl2br(htmlspecialchars($comment->comment)) ?> </p>
         <em>
-            <a href="index.php?action=comment&id=<?= urlencode($comment->id) ?> ">Modifier le commentaire</a>
+            <a href="index.php?action=comment&id=<?= urlencode($comment->id) ?>&postID=<?= $post->identifier ?>">Modifier le commentaire</a>
         </em>
         <?php
     }
