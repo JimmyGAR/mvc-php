@@ -3,10 +3,12 @@
 require_once('src/controllers/add_comment.php');
 require_once('src/controllers/homepage.php');
 require_once('src/controllers/post.php');
+require_once('src/controllers/update.php');
 
 use Application\Controllers\HomePage\HomepageController;
 use Application\Controllers\Post\PostController;
 use Application\Controllers\Add_comment\AddCommentController;
+use Application\Controllers\Update\UpdateController;
 
 try {
     if (isset($_GET['action']) && $_GET['action'] !== '') {
@@ -19,11 +21,30 @@ try {
                 echo 'Erreur : aucun identifiant de billet envoyé';
                 die;
             }
+        }
+        elseif ($_GET['action'] === 'comment') {
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                $identifier = $_GET['id'];
+                $post = new PostController();
+                $post->comment($identifier);
+            } else {
+                echo 'Erreur : aucun identifiant de billet envoyé';
+                die;
+            }
         } elseif ($_GET['action'] === 'addComment') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $identifier = $_GET['id'];
                 $addComment = new AddCommentController();
                 $addComment->addComment($identifier, $_POST);
+            } else {
+                echo 'Erreur : aucun identifiant de billet envoyé';
+                die;
+            }
+        } elseif ($_GET['action'] === 'updateComment') {
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                $identifier = $_GET['id'];
+                $addComment = new UpdateController();
+                $addComment->updateComment($identifier, $_POST);
             } else {
                 echo 'Erreur : aucun identifiant de billet envoyé';
                 die;

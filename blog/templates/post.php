@@ -46,6 +46,9 @@
         <p><strong><?= htmlspecialchars($comment->author) ?> </strong>
             le <?= $comment->frenchCreationDate ?> </p>
         <p><?= nl2br(htmlspecialchars($comment->comment)) ?> </p>
+        <em>
+            <a href="index.php?action=comment&id=<?= urlencode($comment->id) ?> ">Modifier le commentaire</a>
+        </em>
         <?php
     }
     ?>

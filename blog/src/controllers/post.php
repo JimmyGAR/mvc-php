@@ -29,4 +29,15 @@ class PostController
 
         require('templates/post.php');
     }
+
+    public function comment(string $identifier)
+    {
+        $connection = new DatabaseConnection();
+
+        $commentRepository = new CommentRepository();
+        $commentRepository->connection = $connection;
+        $comment = $commentRepository->getComment($identifier);
+
+        require('templates/update.php');
+    }
 }
