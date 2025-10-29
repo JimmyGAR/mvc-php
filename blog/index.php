@@ -1,11 +1,8 @@
 <?php
 
-require_once('src/controllers/add_comment.php');
-require_once('src/controllers/homepage.php');
-require_once('src/controllers/post.php');
-require_once('src/controllers/update.php');
+require __DIR__ . '/vendor/autoload.php';
 
-use Application\Controllers\HomePage\HomepageController;
+use Application\Controllers\Homepage\HomepageController;
 use Application\Controllers\Post\PostController;
 use Application\Controllers\Add_comment\AddCommentController;
 use Application\Controllers\Update\UpdateController;

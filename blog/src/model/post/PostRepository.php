@@ -4,8 +4,6 @@ namespace Application\Model\Post;
 
 use Application\Lib\Database\DatabaseConnection;
 
-require_once('src/lib/database.php');
-
 class Post
 {
     public string $title;
